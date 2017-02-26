@@ -1,0 +1,153 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #f2f2f2;
+  font-family: Arial; }
+
+.wrapper {
+  margin: 0 auto;
+  padding-top: 50px;
+  width: 1000px;
+  height: 100%; }
+  .wrapper .panel {
+    display: inline-block;
+    width: 300px;
+    background-color: #0099ff;
+    padding: 10px 5px 10px 25px;
+    float: left; }
+    .wrapper .panel .panel-header {
+      padding: 10px 0; }
+      .wrapper .panel .panel-header .flag {
+        background: url(../img/sprite.jpg) no-repeat;
+        cursor: pointer;
+        margin: 0 10px;
+        vertical-align: bottom; }
+      .wrapper .panel .panel-header .flag.flower {
+        background-position: 0 0; }
+      .wrapper .panel .panel-header .flag.heart {
+        background-position: -20px 0; }
+      .wrapper .panel .panel-header .flag.sun {
+        background-position: -40px 0; }
+      .wrapper .panel .panel-header .flag.flash {
+        background-position: -60px 0; }
+      .wrapper .panel .panel-header .flag.flower:not(.active) {
+        background-position: 0 -20px; }
+      .wrapper .panel .panel-header .flag.heart:not(.active) {
+        background-position: -20px -20px; }
+      .wrapper .panel .panel-header .flag.sun:not(.active) {
+        background-position: -40px -20px; }
+      .wrapper .panel .panel-header .flag.flash:not(.active) {
+        background-position: -60px -20px; }
+      .wrapper .panel .panel-header input[type=text] {
+        padding: 5px 10px;
+        width: 167px;
+        margin-left: 20px; }
+    .wrapper .panel .panel-content {
+      margin-top: 10px;
+      position: relative;
+      max-height: 450px;
+      overflow: auto; }
+    .wrapper .panel .count {
+      display: inline-block;
+      margin-top: 10px; }
+  .wrapper .div-info {
+    display: inline-block;
+    width: 300px;
+    height: 160px;
+    margin: 0 50px;
+    background-color: lightgray;
+    float: left; }
+    .wrapper .div-info h1 {
+      text-align: center;
+      margin: 15px 0; }
+    .wrapper .div-info > div {
+      margin: 20px; }
+      .wrapper .div-info > div .content {
+        display: inline-block;
+        width: 80%;
+        text-align: center; }
+    .wrapper .div-info .flag {
+      vertical-align: initial; }
+
+.item {
+  background-color: lightgreen;
+  display: inline-block;
+  padding: 10px 8px 10px 15px;
+  width: 250px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 18px; }
+
+.item.active {
+  background-color: yellow; }
+
+.flag {
+  width: 20px;
+  height: 20px;
+  background: url(../img/sprite.jpg) no-repeat;
+  display: inline-block;
+  margin: 0 2px;
+  vertical-align: text-bottom;
+  font-size: 15px; }
+
+.flag.flower {
+  background-position: 0 0; }
+
+.flag.heart {
+  background-position: -20px 0; }
+
+.flag.sun {
+  background-position: -40px 0; }
+
+.flag.flash {
+  background-position: -60px 0; }
+
+.mCSB_inside > .mCSB_container {
+  margin-right: 20px; }
+
+.mCSB_scrollTools .mCSB_dragger {
+  height: 90px; }
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  border-radius: 0;
+  background-color: #fff; }
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px; }
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-right: 25px;
+  cursor: pointer; }
+
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 45px;
+  top: -1px;
+  width: 20px;
+  height: 20px;
+  background: #fff; }
+
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: "•";
+  position: absolute;
+  top: -12px;
+  left: 48px;
+  font-size: 38px;
+  color: #000; }
+
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0; }
+
+[type="checkbox"]:checked + label:after {
+  opacity: 1; }
